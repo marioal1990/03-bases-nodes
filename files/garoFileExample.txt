@@ -1,0 +1,4 @@
+Nombre: Mario Araya
+Salario: $1,800,000.00
+Nombre: Sebastian Araya
+Salario: $700,000.00
