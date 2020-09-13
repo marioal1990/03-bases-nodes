@@ -5,14 +5,15 @@ const { getSalaryByUser, getUsers } = require('./services/userServices');
 let argv = process.argv;
 let parameter = argv[2];
 console.log(parameter);
+console.log(parameter);
 
-// var messages = "";
-// getUsers().forEach(user => {
-//     let message = getSalaryByUser(user);
-//     message = `Nombre: ${message.names}\nSalario: ${message.salary}\n`;
-//     messages += message;
-// });
+var messages = "";
+getUsers().forEach(user => {
+    let message = getSalaryByUser(user);
+    message = `Nombre: ${message.names}\nSalario: ${message.salary}\n`;
+    messages += message;
+});
 
-// createFile(messages)
-//     .then(resolve => console.log(resolve))
-//     .catch(reject => console.log(reject));
+createFile(messages, parameter)
+    .then(resolve => console.log(resolve))
+    .catch(reject => console.log(reject));

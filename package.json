@@ -1,0 +1,22 @@
+{
+  "name": "03-bases-nodes",
+  "version": "1.0.0",
+  "description": "Example Node application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marioal1990/03-bases-nodes.git"
+  },
+  "author": "SuperMario90 <marioal1990@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marioal1990/03-bases-nodes/issues"
+  },
+  "homepage": "https://github.com/marioal1990/03-bases-nodes#readme",
+  "dependencies": {
+    "yargs": "^16.0.3"
+  }
+}

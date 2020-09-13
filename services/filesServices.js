@@ -1,12 +1,15 @@
 const fs = require('fs');
 
 /**
- * Method for write text param on txt file
- * @param {*} message Text for file param
+ * Método que crea un archivo txt y lo llena con datos
+ * @param {*} message Mensaje con datos que serán guardados en el 
+ *                    TXT creado
+ * @param {*} number Número que corresponde al indice que 
+ *                   estará en el archivo TXT
  */
-var createFile = (message) => {
+var createFile = (message, number) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./files/garoFileExample.txt', message, function(err) {
+        fs.writeFile(`./files/messageFile${number}.txt `, message, function(err) {
             if (err) {
                 reject(err);
             } else {
