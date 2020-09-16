@@ -1,5 +1,4 @@
 const businessServices = require('./services/businessServices');
-const colors = require('colors');
 const argv = require(`./config/yargs`).argv;
 const messagesUtils = require('./utils/messagesUtils');
 
