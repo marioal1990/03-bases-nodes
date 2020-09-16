@@ -1,12 +1,13 @@
-function toCamelCase(str) {
-    return str.split(' ').map(function(word, index) {
-        if (index == 0) {
-            return word.toLowerCase();
-        }
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    }).join('');
+var validateInputNumber = (arg) => {
+    return Number.isNaN(Number.parseInt(arg))
+}
+
+var validateInputName = (arg) => {
+    return arg.trim();
 }
 
 module.exports = {
-    toCamelCase
+    //INPUTS VALIDATE
+    validateInputNumber,
+    validateInputName
 }

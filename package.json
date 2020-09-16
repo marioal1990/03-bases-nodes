@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/marioal1990/03-bases-nodes#readme",
   "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
     "yargs": "^16.0.3"
-  }
+  },
+  "devDependencies": {}
 }

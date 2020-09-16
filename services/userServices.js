@@ -1,3 +1,5 @@
+const messagesUtils = require('../utils/messagesUtils');
+
 let formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -50,7 +52,7 @@ let getSalaryByUser = (user) => {
             user: salaryFinded.user
         };
     } else {
-        return `No se ha encontrado el salario para el usuario ${ user.names }`;
+        return undefined;
     }
 };
 

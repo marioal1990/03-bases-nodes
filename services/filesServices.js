@@ -9,11 +9,12 @@ const fs = require('fs');
  */
 var createFile = (message, number) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile(`./files/messageFile${number}.txt `, message, function(err) {
+        var fileName = `messageFile-${number}.txt`;
+        fs.writeFile(`./files/${fileName}`, message, function(err) {
             if (err) {
                 reject(err);
             } else {
-                resolve('File create on files/garoFileExample.txt success..');
+                resolve(fileName);
             }
         });
     });

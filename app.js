@@ -1,19 +1,26 @@
-const { createFile } = require('./services/filesServices');
-const { getSalaryByUser, getUsers } = require('./services/userServices');
-// const { toCamelCase } = require('./utils/stringUtils');
+const businessServices = require('./services/businessServices');
+const colors = require('colors');
+const argv = require(`./config/yargs`).argv;
+const messagesUtils = require('./utils/messagesUtils');
 
-let argv = process.argv;
-let parameter = argv[2];
+let parameter = argv;
+let command = argv._[0];
 console.log(parameter);
-console.log(parameter);
 
-var messages = "";
-getUsers().forEach(user => {
-    let message = getSalaryByUser(user);
-    message = `Nombre: ${message.names}\nSalario: ${message.salary}\n`;
-    messages += message;
-});
+console.log(`***********************************`.bgGreen.black);
+console.log(`          NODEJS EXAMPLE          *`.bgGreen.black);
+console.log(`       Author: SuperMario90       *`.bgGreen.black);
+console.log(`***********************************`.bgGreen.black);
 
-createFile(messages, parameter)
-    .then(resolve => console.log(resolve))
-    .catch(reject => console.log(reject));
+switch (command) {
+    case 'read':
+        messagesUtils.execMessage(`MÉTODO QUE LISTA`);
+        businessServices.read(parameter.name);
+        break;
+    case 'create':
+        messagesUtils.execMessage(`MÉTODO QUE CREA`);
+        businessServices.create(parameter.message, parameter.number);
+        break;
+    default:
+        messagesUtils.execMessage(`SE EJECUTA OTRO MÉTODO`);
+}
