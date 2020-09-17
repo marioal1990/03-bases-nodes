@@ -10,7 +10,7 @@ const MESSAGE_INPUT = 'INPUT: '.yellow;
  * @param {*} message El mensaje que se va a imprimir
  */
 const execMessage = (message) => {
-    console.log(MESSAGE_EXEC + ' ' + message.green);
+    console.log(MESSAGE_EXEC + ' ' + colors.green(message));
 };
 
 /**
@@ -19,7 +19,7 @@ const execMessage = (message) => {
  * @param {*} message 
  */
 const errorMessage = (message) => {
-    console.log(MESSAGE_ERROR + ' ' + message.red);
+    throw new Error(MESSAGE_ERROR + ' ' + colors.red(message));
 };
 
 /**
@@ -28,7 +28,7 @@ const errorMessage = (message) => {
  * @param {*} message 
  */
 const inputMessage = (message) => {
-    console.log(MESSAGE_INPUT + ' ' + message.yellow);
+    console.log(MESSAGE_INPUT + ' ' + colors.yellow(message));
 };
 
 module.exports = {

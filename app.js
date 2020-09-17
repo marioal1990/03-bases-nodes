@@ -4,7 +4,6 @@ const messagesUtils = require('./utils/messagesUtils');
 
 let parameter = argv;
 let command = argv._[0];
-console.log(parameter);
 
 console.log(`***********************************`.bgGreen.black);
 console.log(`          NODEJS EXAMPLE          *`.bgGreen.black);
@@ -14,7 +13,7 @@ console.log(`***********************************`.bgGreen.black);
 switch (command) {
     case 'read':
         messagesUtils.execMessage(`MÉTODO QUE LISTA`);
-        businessServices.read(parameter.name);
+        businessServices.read(parameter.fileName);
         break;
     case 'create':
         messagesUtils.execMessage(`MÉTODO QUE CREA`);

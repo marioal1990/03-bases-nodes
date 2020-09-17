@@ -1,0 +1,6 @@
+{
+    "editor.semanticTokenColorCustomizations": null,
+    "workbench.colorCustomizations" : {
+        "terminal.foreground" : "#00FD61",
+    }
+}

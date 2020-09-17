@@ -1,5 +1,3 @@
-const messagesUtils = require('../utils/messagesUtils');
-
 let formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",

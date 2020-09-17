@@ -38,14 +38,20 @@ let create = (message, number) => {
 /**
  * Método que imprime por consola los datos que se obtienen en un archivo TXT
  * guardada en la carpeta de nombre files
- * @param {*} name El nombre del archivo a llamar. REF: messageFile-{number}.txt
+ * @param {*} fileName El nombre del archivo a llamar. REF: messageFile-{number}.txt
  */
-let read = (name) => {
-    messagesUtils.inputMessage(`Parámetros introducidos [name: ${name}]`);
-    if (stringUtils.validateInputName(name)) {
-        messagesUtils.execMessage(`DO SOMETHING`);
+let read = (fileName) => {
+    messagesUtils.inputMessage(`Parámetros introducidos [fileName: ${fileName}]`);
+    if (stringUtils.validateInputFileName(fileName)) {
+        filesServices.readFile(fileName)
+            .then((resolve) => {
+                console.log(`***********************************`.bgGreen.black);
+                console.log(`${resolve.slice(0, -1)}`.bgGreen.black);
+                console.log(`***********************************`.bgGreen.black);
+            })
+            .catch((reject) => messagesUtils.errorMessage(reject));
     } else {
-        messagesUtils.errorMessage(`El campo name no puede estar vacio`);
+        messagesUtils.errorMessage(`El campo fileName no puede estar vacio`);
     }
 }
 

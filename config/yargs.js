@@ -1,9 +1,9 @@
 //parameters command methods
 var parameters = {
     read: {
-        name: {
+        fileName: {
             demand: true,
-            alias: 'n',
+            alias: 'f',
             description: 'Nombre del archivo que debe encontrarse en la carpeta file - REF: messageFile-{number}.txt'
         }
     },
@@ -11,7 +11,7 @@ var parameters = {
         number: {
             demand: true,
             alias: 'n',
-            description: 'Numeración del archivo - messageFile-{number}.txt - SOLO DÍGITOS'
+            description: 'Numeración en el nombre del archivo - REF: messageFile-{number}.txt - SOLO DÍGITOS'
         },
         message: {
             demand: false,
